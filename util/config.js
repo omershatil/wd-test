@@ -1,10 +1,6 @@
 /**
- * Created by omer on 12/23/2015.
+ * Created by omer on 12/29/2015.
  */
-var q = require('q');
-env = process.env;
-
-
 /**
  * Config the Appium driver.
  * @returns {*}
@@ -31,7 +27,7 @@ var testInit = exports.testInit = function(driver) {
         return driver.setImplicitWaitTimeout(Number(env.IMPLICIT_WAIT_MS)).then(function() {
             console.log('\nSauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + env.SAUCE_TEST_NAME);
             return driver.get(env.TEST_URL);
-    });});
+        });});
 };
 
 /*** Returns desired capabilites. Since Appium's configuration is after the initialization of the driver (unlike with
@@ -83,62 +79,3 @@ var getAppiumDesiredCapabilities = exports.getAppiumDesiredCapabilities = functi
     }
     return desired;
 };
-
-driver = configDriver();
-
-var p;
-q.spawn(function* () {
-    console.log('Execution started');
-    p = yield q.allSettled([driver.init(getAppiumDesiredCapabilities())]);
-    p = yield q.allSettled([driver.setImplicitWaitTimeout(Number(env.IMPLICIT_WAIT_MS))]);
-    console.log('\nSauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + env.SAUCE_TEST_NAME);
-    p = yield q.allSettled([driver.get(env.TEST_URL)]);
-    p = yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
-        return el.click();
-    })]);
-    p = yield q.allSettled([driver.elementByXPath('//textarea[@id="comments"]').then(function(el) {
-        return el.sendKeys('blah blah');
-    })]);
-    p = yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
-        p = el.click();
-    })]);
-    yield driver.quit();
-});
-
-console.log('done');
-/*
- describe("yield test", function () {
- var driver;
-
- before(function () {
- driver = exports.configDriver();
- return exports.testInit(driver);
- });
- after(function () {
- return driver.quit();
- });
-
- afterEach(function () {
-
-
- });
- it('test1 should succeed', function () {
- return q.spawn(function* () {
- console.log('Execution started');
- //p = yield driver.init(exports.getAppiumDesiredCapabilities());
- //p = yield driver.setImplicitWaitTimeout(Number(env.IMPLICIT_WAIT_MS));
- console.log('\nSauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + env.SAUCE_TEST_NAME);
- //p = yield driver.get(env.TEST_URL);
- var p = yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
- return el.click();
- })]);
- p = yield q.allSettled([driver.elementByXPath('//textarea[@id="comments"]').then(function(el) {
- return el.sendKeys('blah blah');
- })]);
- p = yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
- return el.click();
- })]);
- });
- });
- });
- */
