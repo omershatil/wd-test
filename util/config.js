@@ -79,3 +79,16 @@ var getAppiumDesiredCapabilities = exports.getAppiumDesiredCapabilities = functi
     }
     return desired;
 };
+
+var done = exports.done = 0;
+var blockDriverTillDone = exports.blockDriverTillDone = function(driver, maxWaitPeriod, decrement, sleepPeriod) {
+    maxWaitPeriod = typeof maxWaitPeriod !== 'undefined' ? maxWaitPeriod : env.WAIT_FOR_ELEMENT_MS;
+    decrement = typeof decrement !== 'undefined' ? decrement : 1000;
+    sleepPeriod = typeof sleepPeriod !== 'undefined' ? sleepPeriod : 1000;
+    if (exports.done || maxWaitPeriod <= 0) {
+        return;
+    }
+    return driver.sleep(sleepPeriod).then(function() {
+        return blockDriverTillDone(driver, maxWaitPeriod - decrement, decrement, sleepPeriod);
+    });
+};

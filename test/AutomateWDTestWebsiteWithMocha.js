@@ -20,6 +20,7 @@ describe("yield test", function () {
     });
 
     it('test1 should succeed', function () {
+        var done;
         q.spawn(function* () {
             console.log('Execution started');
             console.log('\nSauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + env.SAUCE_TEST_NAME);
@@ -32,10 +33,11 @@ describe("yield test", function () {
             yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
                 return el.click();
             })]);
+            conf.done = yield 1;
         });
-        return driver.sleep(100000).then(function() {
-            console.log('done here');
-        });
+
+        // block on the driver till all promises are done. If not, the test will end!!!
+        return conf.blockDriverTillDone(driver, 100000, 1000, 5000);
     });
 });
 
