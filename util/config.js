@@ -86,6 +86,9 @@ var blockDriverTillDone = exports.blockDriverTillDone = function(driver, maxWait
     decrement = typeof decrement !== 'undefined' ? decrement : 1000;
     sleepPeriod = typeof sleepPeriod !== 'undefined' ? sleepPeriod : 1000;
     if (exports.done || maxWaitPeriod <= 0) {
+        if (!exports.done) {
+            throw Error('Timed out');
+        }
         return;
     }
     return driver.sleep(sleepPeriod).then(function() {
