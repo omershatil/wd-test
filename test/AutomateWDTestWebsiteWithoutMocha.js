@@ -7,6 +7,7 @@ var conf = require('../util/config');
 
 // NOTE: the main thread will return. Then the unresolved promises will get resolved!
 
+/*
 driver = conf.configDriver();
 q.spawn(function* () {
     console.log('Execution started');
@@ -26,4 +27,6 @@ q.spawn(function* () {
     yield driver.quit();
 });
 
+
 console.log('done');
+*/

@@ -3,7 +3,7 @@
  */
 var conf = require('../util/config');
 
-describe("yield test", function () {
+describe("Chaining test", function () {
     var driver;
 
     before(function () {
@@ -17,7 +17,7 @@ describe("yield test", function () {
     afterEach(function () {
     });
 
-    it('test1 should succeed', function () {
+    it('Chaining should succeed', function () {
         // this code assumes no failures. In production code you should allow fail-and-recover promises,
         // as elements may not be visible or get stale and you still want to succeed, under certain conditions
         return driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
