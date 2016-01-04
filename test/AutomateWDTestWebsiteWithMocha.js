@@ -21,19 +21,21 @@ describe("yield test", function () {
     });
 
     it('test1 should succeed', function () {
+        // spawn creates new promises and resolves them. Moreover, allSettled
+        // waits for the chain of promises to complete, and only then does yield returns control
         var done;
         q.spawn(function* () {
             console.log('Execution started');
             console.log('\nSauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + env.SAUCE_TEST_NAME);
-            yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
+            yield driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
                 return el.click();
-            })]);
-            yield q.allSettled([driver.elementByXPath('//textarea[@id="comments"]').then(function(el) {
+            });
+            yield driver.elementByXPath('//textarea[@id="comments"]').then(function(el) {
                 return el.sendKeys('blah blah');
-            })]);
-            yield q.allSettled([driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
+            });
+            yield driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
                 return el.click();
-            })]);
+            });
             conf.done = yield 1;
         });
 

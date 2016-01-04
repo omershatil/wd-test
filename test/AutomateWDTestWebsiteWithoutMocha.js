@@ -6,6 +6,8 @@ env = process.env;
 var conf = require('../util/config');
 
 // NOTE: the main thread will return. Then the unresolved promises will get resolved!
+// This does work well. spawn creates new promises and resolves them. Moreover, allSettled
+// waits for the chain of promises to complete, and only then does yield returns control
 
 /*
 driver = conf.configDriver();
