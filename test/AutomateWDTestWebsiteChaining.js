@@ -2,6 +2,7 @@
  * Created by omer on 12/23/2015.
  */
 var conf = require('../util/config');
+var fs = require('fs');
 
 describe("Chaining test", function () {
     var driver;
@@ -25,9 +26,17 @@ describe("Chaining test", function () {
         return driver.elementByXPath('//textarea[@id="comments"]').then(function(el) {
         return el.sendKeys('blah blah').then(function() {
         return driver.elementByXPath('//div[@id="i_am_an_id"]').then(function(el) {
-        return el.click().then(null, function (err) {
-        console.log('do something!!!');
-        });});});});});});
+        return el.click().then(function () {
+        // taking screenshot fails when using Appium
+        return driver.takeScreenshot().then(function (image) {
+        return fs.writeFile('screenshot.png', image, 'base64', function (err) {
+            console.log('Screenshot: screenshot.png');
+            if (err) {
+                console.log(err);
+            }
+        }).then(null, function(err) {
+            console.log('do something!!!');
+        });});});});});});});});
     });
 });
 

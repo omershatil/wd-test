@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="603d7d0f-83f0-465a-9d0b-33a0c4500c64" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js" afterPath="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithoutMocha.js" afterPath="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithoutMocha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js" afterPath="$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wd-test.iws" />
@@ -45,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutomateWDTestWebsiteWithMocha.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AutomateWDTestWebsiteWithMocha.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33280253">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutomateWDTestWebsiteChaining.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AutomateWDTestWebsiteChaining.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6910299">
+              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -143,11 +142,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/node_modules/mocha-co/lib/runnable.js" />
         <option value="$PROJECT_DIR$/test/AutomateWDTestWebsite.js" />
-        <option value="$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js" />
         <option value="$PROJECT_DIR$/util/config.js" />
         <option value="$PROJECT_DIR$/test/AutomateWDTestWebsiteArray.js" />
         <option value="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithoutMocha.js" />
         <option value="$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js" />
+        <option value="$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js" />
       </list>
     </option>
   </component>
@@ -190,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,7 +238,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -366,7 +365,7 @@
         <env name="IMPLICIT_WAIT_MS" value="5000" />
       </envs>
       <ui>bdd</ui>
-      <extra-mocha-options>--timeout 150000 --harmony --fgrep yield</extra-mocha-options>
+      <extra-mocha-options>--timeout 150000 --harmony --fgrep Chaining</extra-mocha-options>
       <test-directory>$PROJECT_DIR$/test</test-directory>
       <recursive>false</recursive>
       <method />
@@ -398,7 +397,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09973615" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -409,7 +408,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20175439" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30372807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -455,7 +454,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
-          <line>9</line>
+          <line>10</line>
           <option name="timeStamp" value="324" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -533,11 +532,46 @@
           <line>42</line>
           <option name="timeStamp" value="359" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>30</line>
+          <option name="timeStamp" value="360" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>31</line>
+          <option name="timeStamp" value="362" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="363" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>32</line>
+          <option name="timeStamp" value="364" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>34</line>
+          <option name="timeStamp" value="371" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>36</line>
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js</url>
+          <line>37</line>
+          <option name="timeStamp" value="373" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="360" />
+      <option name="time" value="374" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -942,18 +976,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js">
+    <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteWithMocha.js">
+    <entry file="file://$PROJECT_DIR$/test/AutomateWDTestWebsiteChaining.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33280253">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.6910299">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding />
         </state>
       </provider>
